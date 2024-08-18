@@ -1,0 +1,20 @@
+- name: Docs
+  href: articles/
+
+- name: Tutorial
+  href: tutorial/
+
+- name: API Reference
+  href: api/
+
+- name: Release Notes
+  href: release_note/
+
+- name: Comparison between Python DevGpt and DevGpt.Net
+  href: articles/function-comparison-page-between-python-DevGpt-and-devgpt.net.md
+
+- name: Other Languages
+  dropdown: true
+  items:
+    - name: Python
+      href: https://khulnasoft.github.io/devgpt/

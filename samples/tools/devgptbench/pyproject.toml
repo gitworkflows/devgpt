@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devgptbench"
+authors = [
+  { name="Devgpt Team", email="auto-gen@outlook.com" },
+]
+description = "DevGpt Testbed Tools"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8, <3.13"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "devgpt",
+    "docker",
+    "huggingface_hub",
+    "tabulate",
+]
+
+dynamic = ["version"]
+
+[tool.setuptools]
+include-package-data = true
+
+
+[tool.setuptools.dynamic]
+version = {attr = "devgptbench.version.__version__"}
+readme = {file = ["README.md"]}
+
+[tool.setuptools.packages.find]
+include = ["devgptbench*"]
+exclude = ["*.tests*"]
+
+[tool.setuptools.package-data]
+"devgptbench" = ["*.*"]
+
+[project.urls]
+"Homepage" = "https://github.com/khulnasoft/devgpt"
+"Bug Tracker" = "https://github.com/khulnasoft/devgpt/issues"
+
+[project.scripts]
+devgptbench = "devgptbench.cli:main"
+
+[tool.black]
+# https://github.com/psf/black
+line-length = 120
+exclude = "(.eggs|.git|.hg|.mypy_cache|.venv|_build|buck-out|build|dist)"

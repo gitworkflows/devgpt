@@ -1,0 +1,23 @@
+<Project Sdk="Khulnasoft.NET.Sdk">
+
+    <PropertyGroup>
+      <TargetFrameworks>$(TestTargetFrameworks)</TargetFrameworks>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <IsPackable>false</IsPackable>
+      <GenerateDocumentationFile>True</GenerateDocumentationFile>
+      <RootNamespace>DevGpt.Anthropic.Tests</RootNamespace>
+      <IsTestProject>True</IsTestProject>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\DevGpt.Anthropic\DevGpt.Anthropic.csproj" />
+      <ProjectReference Include="..\DevGpt.Tests\DevGpt.Tests.csproj" />
+      <ProjectReference Include="..\..\src\DevGpt.SourceGenerator\DevGpt.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="images\square.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+</Project>

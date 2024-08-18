@@ -1,0 +1,23 @@
+﻿<Project Sdk="Khulnasoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>$(PackageTargetFrameworks)</TargetFrameworks>
+    <RootNamespace>DevGpt.LMStudio</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="$(RepoRoot)/nuget/nuget-package.props" />
+
+  <PropertyGroup>
+    <!-- NuGet Package Settings -->
+    <Title>DevGpt.LMStudio</Title>
+    <Description>
+      Provide support for consuming LMStudio openai-like API service in DevGpt
+    </Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DevGpt.Core\DevGpt.Core.csproj" />
+    <ProjectReference Include="..\DevGpt.OpenAI\DevGpt.OpenAI.csproj" />
+  </ItemGroup>
+
+</Project>

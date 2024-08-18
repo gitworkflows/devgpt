@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devgptstudio"
+authors = [
+  { name="DevGpt Team", email="devgpt@khulnasoft.com" },
+]
+description = "DevGpt Studio"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.9, <3.13"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+
+dependencies = [
+    "pydantic",
+    "fastapi",
+    "typer",
+    "uvicorn",
+    "arxiv",
+    "devgpt[gemini]>=0.2.0",
+    "python-dotenv",
+    "websockets",
+    "numpy < 2.0.0",
+    "sqlmodel",
+    "psycopg",
+    "alembic",
+    "loguru",
+]
+optional-dependencies = {web = ["fastapi", "uvicorn"], database = ["psycopg"]}
+
+dynamic = ["version"]
+
+[tool.setuptools]
+include-package-data = true
+
+
+[tool.setuptools.dynamic]
+version = {attr = "devgptstudio.version.VERSION"}
+readme = {file = ["README.md"]}
+
+[tool.setuptools.packages.find]
+include = ["devgptstudio*"]
+exclude = ["*.tests*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+"devgptstudio" = ["*.*"]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore:Deprecated call to `pkg_resources\\.declare_namespace\\('.*'\\):DeprecationWarning",
+    "ignore::DeprecationWarning:google.rpc",
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/khulnasoft/devgpt"
+"Bug Tracker" = "https://github.com/khulnasoft/devgpt/issues"
+
+[project.scripts]
+devgptstudio = "devgptstudio.cli:run"

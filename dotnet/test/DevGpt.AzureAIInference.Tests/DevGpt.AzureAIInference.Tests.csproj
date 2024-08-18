@@ -1,0 +1,16 @@
+﻿<Project Sdk="Khulnasoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>$(TestTargetFrameworks)</TargetFrameworks>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>True</IsTestProject>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DevGpt.AzureAIInference\DevGpt.AzureAIInference.csproj" />
+    <ProjectReference Include="..\..\src\DevGpt.SourceGenerator\DevGpt.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\DevGpt.Test.Share\DevGpt.Tests.Share.csproj" />
+  </ItemGroup>
+
+</Project>

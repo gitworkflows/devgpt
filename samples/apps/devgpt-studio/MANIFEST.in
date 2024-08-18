@@ -1,0 +1,7 @@
+recursive-include  devgptstudio/web/ui *
+recursive-include  devgptstudio/web/database.sqlite
+recursive-exclude  notebooks *
+
+recursive-exclude  frontend *
+recursive-exclude  docs *
+recursive-exclude  tests *

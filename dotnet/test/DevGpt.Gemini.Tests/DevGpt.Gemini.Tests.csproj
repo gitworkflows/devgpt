@@ -1,0 +1,19 @@
+﻿<Project Sdk="Khulnasoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>$(TestTargetFrameworks)</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <IsTestProject>True</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\sample\DevGpt.Gemini.Sample\DevGpt.Gemini.Sample.csproj" />
+    <ProjectReference Include="..\..\src\DevGpt.Gemini\DevGpt.Gemini.csproj" />
+    <ProjectReference Include="..\DevGpt.Tests\DevGpt.Tests.csproj" />
+    <ProjectReference Include="..\..\src\DevGpt.SourceGenerator\DevGpt.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+</Project>

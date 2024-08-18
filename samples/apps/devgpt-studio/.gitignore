@@ -1,0 +1,25 @@
+database.sqlite
+.cache/*
+devgptstudio/web/files/user/*
+devgptstudio/test
+devgptstudio/web/files/ui/*
+OAI_CONFIG_LIST
+scratch/
+devgptstudio/web/workdir/*
+devgptstudio/web/ui/*
+devgptstudio/web/skills/user/*
+.release.sh
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/

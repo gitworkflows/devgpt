@@ -1,0 +1,7 @@
+promptflow==1.8.0
+devgpt==0.2.23
+devgpt[graph]
+devgpt[redis]
+redis
+semantic-kernel
+beautifulsoup4

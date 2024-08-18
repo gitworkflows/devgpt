@@ -1,0 +1,23 @@
+﻿<Project Sdk="Khulnasoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>$(PackageTargetFrameworks)</TargetFrameworks>
+    <RootNamespace>DevGpt.Mistral</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="$(RepoRoot)/nuget/nuget-package.props" />
+
+  <PropertyGroup>
+    <!-- NuGet Package Settings -->
+    <Title>DevGpt.Mistral</Title>
+    <Description>
+      Provide support for consuming Mistral model in DevGpt
+    </Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DevGpt.Core\DevGpt.Core.csproj" />
+  </ItemGroup>
+
+
+</Project>

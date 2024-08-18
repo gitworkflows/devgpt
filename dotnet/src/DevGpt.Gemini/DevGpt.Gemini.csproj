@@ -1,0 +1,27 @@
+﻿<Project Sdk="Khulnasoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>$(PackageTargetFrameworks)</TargetFrameworks>
+  </PropertyGroup>
+
+  <Import Project="$(RepoRoot)/nuget/nuget-package.props" />
+
+  <PropertyGroup>
+    <!-- NuGet Package Settings -->
+    <Title>DevGpt.Gemini</Title>
+    <Description>
+      This package provides the intergration with Gemini.
+    </Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Google.Cloud.AIPlatform.V1" Version="$(GoogleCloudAPIPlatformVersion)" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\DevGpt.Core\DevGpt.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="DevGpt.Gemini.Tests" />
+  </ItemGroup>
+</Project>

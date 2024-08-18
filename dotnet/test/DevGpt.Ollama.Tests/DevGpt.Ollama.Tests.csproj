@@ -1,0 +1,25 @@
+<Project Sdk="Khulnasoft.NET.Sdk">
+
+    <PropertyGroup>
+      <TargetFrameworks>$(TestTargetFrameworks)</TargetFrameworks>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <IsPackable>false</IsPackable>
+      <IsTestProject>True</IsTestProject>
+      <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\DevGpt.Ollama\DevGpt.Ollama.csproj" />
+      <ProjectReference Include="..\DevGpt.Tests\DevGpt.Tests.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="images\image.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="images\square.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

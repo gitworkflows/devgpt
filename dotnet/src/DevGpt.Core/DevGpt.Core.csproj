@@ -1,0 +1,26 @@
+﻿<Project Sdk="Khulnasoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>$(PackageTargetFrameworks)</TargetFrameworks>
+    <RootNamespace>DevGpt.Core</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="$(RepoRoot)/nuget/nuget-package.props" />
+
+  <PropertyGroup>
+    <!-- NuGet Package Settings -->
+    <Title>DevGpt.Core</Title>
+    <Description>
+      Core library for DevGpt. This package provides contracts and core functionalities for DevGpt.
+    </Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JsonSchema.Net.Generation" Version="$(JsonSchemaVersion)" />
+    <PackageReference Include="System.Memory.Data" Version="8.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="Khulnasoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+   </ItemGroup>
+
+</Project>

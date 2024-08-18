@@ -1,0 +1,25 @@
+﻿<Project Sdk="Khulnasoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>$(PackageTargetFrameworks)</TargetFrameworks>
+    <RootNamespace>DevGpt.AzureAIInference</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="$(RepoRoot)/nuget/nuget-package.props" />
+
+  <PropertyGroup>
+    <!-- NuGet Package Settings -->
+    <Title>DevGpt.AzureAIInference</Title>
+    <Description>
+      Azure AI Inference Intergration for DevGpt.
+    </Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.AI.Inference" Version="$(AzureAIInferenceVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DevGpt.Core\DevGpt.Core.csproj" />
+  </ItemGroup>
+
+</Project>
