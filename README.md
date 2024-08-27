@@ -1,3 +1,4 @@
+# DevGpt
 <a name="readme-top"></a>
 
 [![PyPI version](https://badge.fury.io/py/pydevgpt.svg)](https://badge.fury.io/py/pydevgpt)
@@ -9,7 +10,6 @@
 
 [![NuGet version](https://badge.fury.io/nu/DevGpt.Core.svg)](https://badge.fury.io/nu/DevGpt.Core)
 
-# DevGpt
 [📚 Cite paper](#related-papers).
 <!-- <p align="center">
     <img src="https://github.com/khulnasoft/devgpt/blob/main/website/static/img/flaml.svg"  width=200>
